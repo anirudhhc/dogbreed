@@ -1,0 +1,23 @@
+class Dog:
+    # Class variable shared among all instances
+    species = "Canis lupus familiaris"
+    
+    def __init__(self, breed, name):
+        # Instance variables unique to each instance
+        self.breed = breed
+        self.name = name
+    
+    # Method to display the details of the dog
+    def display_details(self):
+        print(f"Name: {self.name}")
+        print(f"Breed: {self.breed}")
+        print(f"Species: {Dog.species}")
+
+# Creating two dog objects with different breeds
+dog1 = Dog("Golden Retriever", "Buddy")
+dog2 = Dog("Bulldog", "Rocky")
+
+# Displaying the details of each dog
+dog1.display_details()
+print()  # Empty line for better readability
+dog2.display_details()
